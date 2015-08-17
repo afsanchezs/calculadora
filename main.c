@@ -1,25 +1,38 @@
-#include <stdio.h>
-#include "calculadora.h"
-int main (void)
+#include<stdio.h>
+#include"calculadora.h"
+
+int main(void)
 {
-	int a,b,c,o;
-	printf("Calculadora para 2 numeros, digite 1 para realizar suma, 2 para resta, 3 para multiplicacion, 4 para division");
-	scanf("%d",&o);
-	printf("Ingrese el primer valor");
-	scanf("%d",&a);
-	printf("Ingrese el segundo valor");
-	scanf("%d",&b);
-	switch(o){
-		case 1: c=suma(a,b);
-		break;
-		case 2: c=resta(a,b);
-		break;
-		case 3: c=multiplicacion(a,b);
-		break;
-		case 4: c=division(a,b);
-		break;
-		default: c=0;
+	int opcion,Valor1,Valor2,Resultado;
+	
+	printf("Que operacion descea realizar:\n 1.Suma\n2.Resta\n3.Multiplicacion\n4.Division\n");
+	scanf("%d",&opcion);
+	printf("Ingrese el primer numero a operar");
+	scanf("%d",& Valor1);
+	printf("Ingrese el segundo numero a operar");
+	scanf(%d",& Valor2);
+	
+	switch(opcion)
+	{
+		case 1:
+			Resultado=suman(Valor1,Valor2);
+			break;
+		
+		case 2:
+			Resultado=resta(Valor1,Valor2);
+			break;
+		
+		case 3:
+			Resultado=multiplicar(Valor1,Valor2);
+			break;
+		
+		case 4:
+			Resultado=dividir(Valor1,Valor2);
+			break;
+		
+		default: 
+				Resultado=0;
 	}
-	printf("El resultado es %d","c");
-return 0;
+	
+	printf("el resultado es %d","d");
 }
